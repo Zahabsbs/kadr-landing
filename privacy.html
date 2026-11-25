@@ -1,0 +1,69 @@
+<!doctype html><html lang="ru" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kadr — Политика конфиденциальности</title><link rel="icon" href="img/logo.svg">
+<script>try{var t=localStorage.getItem('kadr-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+@font-face{font-family:InterT;src:url(fonts/Inter-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:InterT;src:url(fonts/Inter-SemiBold.woff2) format("woff2");font-weight:600}
+@font-face{font-family:InterD;src:url(fonts/InterDisplay-Bold.woff2) format("woff2");font-weight:700}
+:root{--bg:#000;--t:#f5f5f7;--t2:#a1a1a6;--l:rgba(255,255,255,.1)}
+[data-theme=light]{--bg:#fbfbfd;--t:#1d1d1f;--t2:#6e6e73;--l:rgba(0,0,0,.08)}
+body{margin:0;background:var(--bg);color:var(--t);font:400 17px/1.6 -apple-system,BlinkMacSystemFont,InterT,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+header{max-width:760px;margin:0 auto;padding:22px 20px;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+header a{color:var(--t);text-decoration:none;display:flex;gap:9px;align-items:center;font:700 19px -apple-system,InterD,sans-serif}
+header .sw{font:400 14px InterT,sans-serif;color:var(--t2)}
+main{max-width:760px;margin:0 auto;padding:30px 20px 80px}
+h1{font:700 clamp(34px,6vw,52px)/1.05 -apple-system,InterD,sans-serif;letter-spacing:-.04em;margin:0 0 10px}
+h2{font:700 22px/1.25 -apple-system,InterD,sans-serif;letter-spacing:-.02em;margin:44px 0 10px;padding-top:24px;border-top:1px solid var(--l)}
+.d{color:var(--t2);margin:0 0 28px}p,li{color:var(--t2)}b{color:var(--t);font-weight:600}li{margin:8px 0}a{color:#ff6fa6}
+</style></head><body>
+<header><a href="./"><img src="img/logo.svg" width="26" height="26" alt="">Kadr</a><a class="sw" href="privacy-en.html">English</a></header>
+<main>
+<h1>Политика конфиденциальности Kadr</h1>
+<p class="d">Редакция от 19.11.2026</p>
+<p>Эта политика описывает, какие данные обрабатывает приложение Kadr для Android (app.kadr.video) и его сервер, зачем и как долго. Оператор: самозанятый. Связь: ggghel43@gmail.com.</p>
+
+<h2>1. Что остаётся только на телефоне</h2>
+<p>Скачанные видео и музыка, обложки, субтитры, тексты песен, история загрузок и библиотека хранятся только на вашем устройстве. Мы их не получаем. Видео сохраняются в папку «Фильмы/Kadr», музыка — в «Музыка/Kadr».</p>
+
+<h2>2. Что получает сервер Kadr</h2>
+<ul>
+<li><b>Обезличенный идентификатор устройства</b> — хэш (SHA-256) от системного идентификатора Android. По нему работают лимиты и подписка без регистрации.</li>
+<li><b>Счётчики использования</b> — сколько видео и треков скачано за день, сколько вопросов задано в чате о видео (только количество и время, не текст).</li>
+<li><b>Данные подписки</b> — статус Kadr+, срок действия, идентификаторы платежей ЮKassa и идентификатор сохранённого способа оплаты для автопродления. Данных банковской карты мы не получаем и не храним — их обрабатывает ЮKassa.</li>
+<li><b>Адрес электронной почты</b> — только если вы указали его при оплате, для отправки чека и восстановления подписки.</li>
+<li><b>Язык интерфейса.</b></li>
+</ul>
+
+<h2>3. Данные для AI-функций (только когда вы ими пользуетесь)</h2>
+<ul>
+<li><b>Саммари видео:</b> название, автор, длительность и субтитры видео.</li>
+<li><b>Вопросы о видео:</b> название, текущий момент, субтитры ±20 секунд вокруг него, ваш вопрос и несколько предыдущих сообщений этого диалога.</li>
+<li><b>Подборки:</b> список названий и авторов из библиотеки (до 60 позиций), тип (видео или музыка) и сайт.</li>
+<li><b>Караоке:</b> исполнитель, название трека и его длительность — для поиска текста песни.</li>
+</ul>
+<p>Сервер передаёт эти данные сервисам: Groq, Inc. (быстрые ответы, США), Google LLC — Gemini API и YouTube Data API (подборки и поиск видео, США), LRCLIB (тексты песен). Тексты ваших вопросов и ответы сервер не сохраняет. Результаты поиска и найденные тексты песен кэшируются без привязки к пользователю.</p>
+<p>AI-функциям нужен интернет. Скачанные файлы воспроизводятся без него.</p>
+
+<h2>4. Оплата</h2>
+<p>Платежи принимает ООО НКО «ЮMoney» (сервис ЮKassa). При оплате вы переходите на страницу ЮKassa; данные карты вводятся там и обрабатываются по правилам ЮKassa: <a href="https://yookassa.ru/docs/yookassa-politika-konfidentsialnosti.pdf">yookassa.ru</a>. Автопродление можно отключить в настройках приложения в любой момент.</p>
+
+<h2>5. Где и сколько хранится</h2>
+<p>Данные сервера хранятся у хостинг-провайдера Supabase, Inc. eu-west-1. Счётчики дня хранятся до 90 дней, журнал вопросов (только время) — до 30 дней, данные подписки — пока действует учётная запись и 3 года после последнего платежа (для бухгалтерского учёта). Вы можете попросить удалить данные, написав на ggghel43@gmail.com — укажите версию приложения и примерное время покупки.</p>
+
+<h2>6. Права пользователя</h2>
+<p>Вы можете узнать, какие данные о вас обрабатываются, исправить или удалить их, отозвать согласие (это отключит подписку и AI-функции). Запросы — на ggghel43@gmail.com, ответ в течение 10 рабочих дней.</p>
+
+<h2>7. Разрешения приложения</h2>
+<ul>
+<li><b>Интернет</b> — скачивание и AI-функции.</li>
+<li><b>Уведомления</b> — ход загрузок, плеер в шторке и новые подборки.</li>
+<li><b>Работа в фоне</b> — чтобы загрузки и музыка не обрывались при сворачивании.</li>
+</ul>
+<p>Kadr не запрашивает доступ к контактам, геолокации, камере или микрофону и не показывает рекламу.</p>
+
+<h2>8. Ответственность за контент</h2>
+<p>Kadr — инструмент для сохранения видео и музыки для личного просмотра. Пользователь сам отвечает за соблюдение прав авторов и правил сайтов, с которых сохраняет материалы.</p>
+
+<h2>9. Изменения</h2>
+<p>Мы сообщим об изменениях этой политики в приложении. Актуальная версия всегда по этому адресу.</p>
+</main></body></html>

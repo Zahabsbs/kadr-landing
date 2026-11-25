@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kadr — видео и музыка с собой</title>
+<meta name="description" content="Kadr для Android: сохраняй видео и музыку для офлайна, смотри в удобном плеере, пой в караоке и спрашивай нейросеть о видео.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Kadr — видео и музыка с собой">
+<meta property="og:description" content="Видео и музыка офлайн, плеер, караоке и AI для видео. Для Android.">
+<meta property="og:image" content="img/download.webp">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/InterDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>try{const t=localStorage.getItem("kadr-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21.5 4.2 2.9 11.4c-1 .4-1 1.6.1 1.9l4.6 1.4 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.4 4.8 3.5c.6.4 1.4.1 1.6-.6L23 5.4c.2-.9-.7-1.6-1.5-1.2Z" fill="currentColor" stroke="none"/><path d="m8 14.5 9.5-6.2-7.2 7.3" stroke="#000" stroke-opacity=".25" stroke-width="1.2" fill="none"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m10.5 9.5 4 2.5-4 2.5z"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5 13.6 8a2 2 0 0 0 1.4 1.4l4.5 1.6-4.5 1.6a2 2 0 0 0-1.4 1.4L12 18.5l-1.6-4.5A2 2 0 0 0 9 12.6L4.5 11 9 9.4A2 2 0 0 0 10.4 8z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M3 3l18 18M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M14.5 10.4A10 10 0 0 1 19 13M2 9a15 15 0 0 1 4.5-2.8M11 5.1A15 15 0 0 1 22 9"/><circle cx="12" cy="20" r=".6"/></symbol>
+  <symbol id="i-speed" viewBox="0 0 24 24"><path d="M12 14l4-5M4.9 19a9 9 0 1 1 14.2 0"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8.3-7.5 9.5-4.3-1.2-7.5-5-7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-android" viewBox="0 0 24 24"><path d="M6 18V10h12v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zM4 11v5M20 11v5M9.5 19v2.5M14.5 19v2.5M6.5 9a5.5 5.5 0 0 1 11 0zM8 4l1.3 2M16 4l-1.3 2"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Kadr"><img src="img/logo.svg" alt="" width="28" height="28"><span>Kadr</span></a>
+  <nav class="links">
+    <a href="#features">Возможности</a>
+    <a href="#ai">AI</a>
+    <a href="#safe">Безопасность</a>
+    <a href="#plus">Kadr+</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <div class="nav-r">
+    <a class="theme tg-nav" data-tg href="#" target="_blank" rel="noopener" aria-label="Telegram-канал Kadr"><svg class="i"><use href="#i-tg"/></svg></a>
+    <button class="theme" id="theme" aria-label="Сменить тему"><svg class="i sun"><use href="#i-sun"/></svg><svg class="i moon"><use href="#i-moon"/></svg></button>
+    <a class="pill-btn" href="#download">Скачать</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <p class="eyebrow reveal">Kadr для Android</p>
+    <h1 class="reveal">Всё, что смотришь.<br><span class="grad">С собой.</span></h1>
+    <p class="lead reveal">Сохраняй видео и музыку для офлайна, смотри в плеере без лишнего и спрашивай нейросеть о том, что видишь.</p>
+    <div class="cta reveal" id="download">
+      <a class="btn-primary" id="apkBtn" href="#" download>
+        <svg class="i"><use href="#i-dl"/></svg>
+        <span><b>Скачать APK</b><small id="apkMeta">версия 1.1.1</small></span>
+      </a>
+      <a class="btn-store" id="rsBtn" href="#" aria-disabled="true">
+        <span class="rs-logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0077FF"/><path fill="#fff" d="M19 19h16.5c6 0 10 3.6 10 9 0 3.9-2.1 6.8-5.6 8.1L46 45h-8.2l-5.4-8.3H26V45h-7zm7 6v6h9c2 0 3.4-1.2 3.4-3s-1.4-3-3.4-3z"/></svg>
+        </span>
+        <span><small>Скоро в</small><b>RuStore</b></span>
+        <em class="soon" id="rsSoon">на модерации</em>
+      </a>
+    </div>
+    <p class="fine reveal" id="apkFine">Бесплатно · Android 10+ · без регистрации</p>
+
+    <div class="stage reveal">
+      <figure class="phone p-left"><img src="img/video.webp" alt="Библиотека видео в Kadr" width="390" height="844"></figure>
+      <figure class="phone p-center"><img src="img/download.webp" alt="Экран загрузки Kadr" width="390" height="844"></figure>
+      <figure class="phone p-right"><img src="img/player.webp" alt="Музыкальный плеер Kadr" width="390" height="844"></figure>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <section class="strip">
+    <div class="strip-in">
+      <div><b>1000+</b><span>сайтов: YouTube, VK Видео, RuTube и другие</span></div>
+      <div><b>0 ₽</b><span>чтобы начать, без аккаунта</span></div>
+      <div><b>Офлайн</b><span>файлы хранятся на твоём телефоне</span></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="sec" id="features">
+    <p class="eyebrow reveal">Возможности</p>
+    <h2 class="reveal">Тонкий. Лёгкий.<br>И умеет больше, чем кажется.</h2>
+
+    <div class="bento">
+      <article class="card c-wide reveal">
+        <div class="txt">
+          <span class="ic"><svg class="i"><use href="#i-dl"/></svg></span>
+          <h3>Вставь ссылку — остальное сделает Kadr</h3>
+          <p>Или поделись видео прямо из приложения. Выбери качество или только звук, и файл уже в загрузках. Отменить и удалить можно в любой момент.</p>
+        </div>
+        <figure class="phone sm tilt"><img src="img/download.webp" alt="" loading="lazy" width="390" height="844"></figure>
+      </article>
+
+      <article class="card reveal">
+        <span class="ic"><svg class="i"><use href="#i-video"/></svg></span>
+        <h3>Видео и музыка — раздельно</h3>
+        <p>Две библиотеки, поиск по каждой. Клипы не смешиваются с лекциями.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="ic"><svg class="i"><use href="#i-speed"/></svg></span>
+        <h3>Плеер, как надо</h3>
+        <p>Скорость от 0.5× до 2×, двойной тап на ±10 секунд и продолжение с места, где остановился.</p>
+      </article>
+
+      <article class="card c-tall reveal">
+        <span class="ic"><svg class="i"><use href="#i-mic"/></svg></span>
+        <h3>Караоке из любого трека</h3>
+        <p>Текст песни идёт строчка за строчкой в такт музыке. Включается одной кнопкой.</p>
+        <figure class="phone sm"><img src="img/music.webp" alt="" loading="lazy" width="390" height="844"></figure>
+      </article>
+
+      <article class="card reveal">
+        <span class="ic"><svg class="i"><use href="#i-moon"/></svg></span>
+        <h3>Таймер сна</h3>
+        <p>Музыка сама стихнет через 10–90 минут. Играет в фоне и на заблокированном экране.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="ic"><svg class="i"><use href="#i-wifi"/></svg></span>
+        <h3>Без интернета</h3>
+        <p>В самолёте, в метро, на даче. Всё скачанное открывается мгновенно.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section class="sec ai" id="ai">
+    <div class="ai-grid">
+      <div class="ai-txt">
+        <p class="eyebrow reveal">Нейросеть внутри</p>
+        <h2 class="reveal">Час видео.<br><span class="grad">Суть за 10 секунд.</span></h2>
+        <ul class="ai-list">
+          <li class="reveal"><span class="ic"><svg class="i"><use href="#i-spark"/></svg></span><div><b>Саммари</b><p>Коротко о главном и таймкоды — нажми на пункт, и видео перемотается.</p></div></li>
+          <li class="reveal"><span class="ic"><svg class="i"><use href="#i-chat"/></svg></span><div><b>Спроси видео</b><p>«Что он имел в виду?» — AI отвечает по тому, что звучит в ролике рядом с текущим моментом.</p></div></li>
+          <li class="reveal"><span class="ic"><svg class="i"><use href="#i-video"/></svg></span><div><b>Подборки для тебя</b><p>Kadr смотрит на твою библиотеку и советует, что посмотреть и послушать дальше.</p></div></li>
+        </ul>
+        <p class="fine reveal">Попробовать AI можно бесплатно: 3 саммари, 5 вопросов и 1 подборка.</p>
+      </div>
+      <figure class="phone ai-phone reveal"><img src="img/summary.webp" alt="AI-саммари видео в Kadr" loading="lazy" width="390" height="844"></figure>
+    </div>
+  </section>
+
+  <!-- SAFE -->
+  <section class="sec safe" id="safe">
+    <p class="eyebrow reveal">Безопасность</p>
+    <h2 class="reveal"><span class="grad">0 из 66</span> антивирусов<br>нашли угрозы.</h2>
+    <p class="lead reveal">Каждую версию Kadr проверяем на VirusTotal — это 66 антивирусов сразу: Avast, AVG, BitDefender, AhnLab и другие. Отчёт открыт — можно проверить самому.</p>
+    <a class="vt-shot reveal" id="vtLink" href="#" target="_blank" rel="noopener">
+      <picture><source media="(max-width: 640px)" srcset="img/virustotal-m.webp"><img src="img/virustotal.webp" alt="Отчёт VirusTotal: 0 из 66 антивирусов не нашли угроз в Kadr-1.1.1.apk" loading="lazy" width="1777" height="494"></picture>
+    </a>
+    <div class="vt-meta reveal">
+      <span><svg class="i"><use href="#i-shield"/></svg><b id="vtVer">Kadr 1.1.1</b></span>
+      <code id="vtHash" title="SHA-256">3d33131f…911373d5</code>
+      <a class="pill-btn ghost" id="vtBtn" href="#" target="_blank" rel="noopener">Открыть отчёт</a>
+    </div>
+  </section>
+
+  <!-- PLUS -->
+  <section class="sec" id="plus">
+    <p class="eyebrow reveal">Kadr+</p>
+    <h2 class="reveal">Без ограничений.<br>199 ₽ в месяц.</h2>
+    <p class="lead reveal">Основное бесплатно навсегда. Kadr+ снимает лимиты и открывает нейросеть целиком.</p>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Бесплатно</h3>
+        <div class="price">0 ₽</div>
+        <ul>
+          <li><svg class="i"><use href="#i-check"/></svg>5 видео и 5 треков в день</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Плеер, караоке, фоновое воспроизведение</li>
+          <li><svg class="i"><use href="#i-check"/></svg>AI пробно: 3 саммари, 5 вопросов, 1 подборка</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Фоновые подборки раз в неделю</li>
+        </ul>
+      </div>
+      <div class="plan pro reveal">
+        <div class="badge">Kadr+</div>
+        <h3>Kadr+</h3>
+        <div class="price">199 ₽<small> / мес</small></div>
+        <ul>
+          <li><svg class="i"><use href="#i-check"/></svg>Видео и музыка без лимита</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Саммари любых видео</li>
+          <li><svg class="i"><use href="#i-check"/></svg>10 вопросов к видео каждые 48 часов</li>
+          <li><svg class="i"><use href="#i-check"/></svg>AI-подборки по кнопке и в фоне до раза в день</li>
+        </ul>
+        <p class="fine">Оплата в приложении через ЮKassa. Отмена в настройках в любой момент.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec" id="reviews">
+    <p class="eyebrow reveal">Отзывы</p>
+    <h2 class="reveal">Что говорят о Kadr</h2>
+    <div class="rv-head reveal">
+      <div class="rv-score" id="rvScore"></div>
+      <button class="pill-btn ghost" id="rvOpen"><svg class="i"><use href="#i-plus"/></svg>Оставить отзыв</button>
+    </div>
+    <div class="rv-list" id="rvList"></div>
+
+    <form class="rv-form" id="rvForm" hidden novalidate>
+      <h3>Твой отзыв</h3>
+      <div class="stars" id="rvStars" role="radiogroup" aria-label="Оценка">
+        <button type="button" data-v="1" aria-label="1"><svg class="i"><use href="#i-star"/></svg></button>
+        <button type="button" data-v="2" aria-label="2"><svg class="i"><use href="#i-star"/></svg></button>
+        <button type="button" data-v="3" aria-label="3"><svg class="i"><use href="#i-star"/></svg></button>
+        <button type="button" data-v="4" aria-label="4"><svg class="i"><use href="#i-star"/></svg></button>
+        <button type="button" data-v="5" aria-label="5"><svg class="i"><use href="#i-star"/></svg></button>
+      </div>
+      <input id="rvName" maxlength="40" placeholder="Имя" autocomplete="given-name">
+      <textarea id="rvText" maxlength="600" rows="4" placeholder="Что понравилось, чего не хватает?"></textarea>
+      <input class="hp" id="rvWeb" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="Сайт">
+      <div class="rv-foot"><span id="rvCount">0 / 600</span><span class="rv-err" id="rvErr"></span></div>
+      <div class="rv-actions"><button type="button" class="pill-btn ghost" id="rvCancel">Отмена</button><button class="pill-btn" id="rvSend">Отправить</button></div>
+      <p class="fine">Отзывы появляются после проверки. Без ссылок, телефонов и оскорблений.</p>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <p class="eyebrow reveal">Вопросы</p>
+    <h2 class="reveal">Коротко о важном</h2>
+    <div class="faq">
+      <details class="reveal"><summary>Как установить APK?</summary><p>Скачай файл, открой его из уведомления или папки «Загрузки». Android попросит разрешить установку из этого источника — разреши для браузера и нажми «Установить». Обновления ставятся поверх, библиотека сохраняется.</p></details>
+      <details class="reveal"><summary>Это безопасно?</summary><p>Да. Каждая версия проходит проверку на VirusTotal: 66 антивирусов, 0 угроз. APK подписан одним ключом разработчика, поэтому обновление встанет только поверх оригинала. Скоро Kadr появится в RuStore с проверкой магазина.</p></details>
+      <details class="reveal"><summary>Где хранятся файлы?</summary><p>Только на твоём телефоне, в папках «Movies/Kadr» и «Music/Kadr». Их видят галерея и другие плееры.</p></details>
+      <details class="reveal"><summary>Нужна регистрация?</summary><p>Нет. Kadr работает сразу. Для чека за Kadr+ нужна только почта.</p></details>
+      <details class="reveal"><summary>Что можно скачивать?</summary><p>Свои видео, ролики под свободной лицензией и то, что авторы разрешают сохранять. Уважай авторские права: скачанное — для личного просмотра.</p></details>
+      <details class="reveal"><summary>Как отменить Kadr+?</summary><p>В приложении: Настройки → «Отключить автопродление». Kadr+ доработает до конца оплаченного месяца.</p></details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <img src="img/logo.svg" alt="" width="88" height="88" class="reveal">
+    <h2 class="reveal">Kadr. <span class="grad">Попробуй сегодня.</span></h2>
+    <div class="cta reveal">
+      <a class="btn-primary" data-apk href="#" download><svg class="i"><use href="#i-dl"/></svg><span><b>Скачать APK</b><small data-apkmeta>версия 1.1.1</small></span></a>
+    </div>
+    <a class="tg-card reveal" data-tg href="#" target="_blank" rel="noopener">
+      <span class="tg-ic"><svg class="i"><use href="#i-tg"/></svg></span>
+      <span class="tg-txt"><b>Kadr в Telegram</b><small>Новости, обновления и первые версии — раньше всех</small></span>
+      <span class="tg-go">Подписаться</span>
+    </a>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="brand"><img src="img/logo.svg" alt="" width="22" height="22"><span>Kadr</span></div>
+    <div class="foot-links">
+      <a id="privacy" href="#">Политика конфиденциальности</a>
+      <a data-tg href="#" target="_blank" rel="noopener">Telegram</a>
+      <a id="mail" href="#" hidden></a>
+    </div>
+    <p class="fine">© <span id="yr">2026</span> Kadr. Android — товарный знак Google LLC. RuStore — товарный знак VK.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><img src="img/logo.svg" alt="" width="36" height="36"><div><b>Kadr</b><small data-apkmeta>версия 1.1.1</small></div><a class="pill-btn" data-apk href="#" download>Скачать</a></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

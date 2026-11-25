@@ -1,0 +1,69 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kadr — Privacy Policy</title><link rel="icon" href="img/logo.svg">
+<script>try{var t=localStorage.getItem('kadr-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+@font-face{font-family:InterT;src:url(fonts/Inter-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:InterT;src:url(fonts/Inter-SemiBold.woff2) format("woff2");font-weight:600}
+@font-face{font-family:InterD;src:url(fonts/InterDisplay-Bold.woff2) format("woff2");font-weight:700}
+:root{--bg:#000;--t:#f5f5f7;--t2:#a1a1a6;--l:rgba(255,255,255,.1)}
+[data-theme=light]{--bg:#fbfbfd;--t:#1d1d1f;--t2:#6e6e73;--l:rgba(0,0,0,.08)}
+body{margin:0;background:var(--bg);color:var(--t);font:400 17px/1.6 -apple-system,BlinkMacSystemFont,InterT,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+header{max-width:760px;margin:0 auto;padding:22px 20px;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+header a{color:var(--t);text-decoration:none;display:flex;gap:9px;align-items:center;font:700 19px -apple-system,InterD,sans-serif}
+header .sw{font:400 14px InterT,sans-serif;color:var(--t2)}
+main{max-width:760px;margin:0 auto;padding:30px 20px 80px}
+h1{font:700 clamp(34px,6vw,52px)/1.05 -apple-system,InterD,sans-serif;letter-spacing:-.04em;margin:0 0 10px}
+h2{font:700 22px/1.25 -apple-system,InterD,sans-serif;letter-spacing:-.02em;margin:44px 0 10px;padding-top:24px;border-top:1px solid var(--l)}
+.d{color:var(--t2);margin:0 0 28px}p,li{color:var(--t2)}b{color:var(--t);font-weight:600}li{margin:8px 0}a{color:#ff6fa6}
+</style></head><body>
+<header><a href="./"><img src="img/logo.svg" width="26" height="26" alt="">Kadr</a><a class="sw" href="privacy.html">Русский</a></header>
+<main>
+<h1>Kadr Privacy Policy</h1>
+<p class="d">Effective 19.11.2026</p>
+<p>This policy explains what data the Kadr Android app (app.kadr.video) and its server process, why, and for how long. Operator: self-employed. Contact: ggghel43@gmail.com.</p>
+
+<h2>1. What stays on your phone</h2>
+<p>Downloaded videos and music, covers, subtitles, lyrics, download history and your library are stored only on your device. We never receive them. Videos are saved to Movies/Kadr, music to Music/Kadr.</p>
+
+<h2>2. What the Kadr server receives</h2>
+<ul>
+<li><b>A pseudonymous device ID</b> — a SHA-256 hash of the Android system ID, used for limits and the subscription without sign-up.</li>
+<li><b>Usage counters</b> — how many videos and tracks were downloaded today and how many questions were asked in video chat (counts and times only, not the text).</li>
+<li><b>Subscription data</b> — Kadr+ status, expiry, YooKassa payment IDs and the saved payment method ID used for auto-renewal. We never receive or store card details — YooKassa handles them.</li>
+<li><b>Email</b> — only if you enter it at checkout, for the receipt and restoring the subscription.</li>
+<li><b>Interface language.</b></li>
+</ul>
+
+<h2>3. Data for AI features (only when you use them)</h2>
+<ul>
+<li><b>Video summary:</b> title, author, length and subtitles of the video.</li>
+<li><b>Ask the video:</b> title, current moment, subtitles ±20 seconds around it, your question and a few previous messages of that conversation.</li>
+<li><b>Picks:</b> titles and authors from your library (up to 60 items), their type (video or music) and site.</li>
+<li><b>Karaoke:</b> artist, track title and length, to find lyrics.</li>
+</ul>
+<p>The server forwards this data to: Groq, Inc. (fast answers, USA), Google LLC — Gemini API and YouTube Data API (picks and video search, USA), and LRCLIB (lyrics). The server does not store your questions or the answers. Search results and lyrics are cached without any link to a user.</p>
+<p>AI features need an internet connection. Downloaded files play offline.</p>
+
+<h2>4. Payments</h2>
+<p>Payments are processed by YooMoney (YooKassa). At checkout you are taken to a YooKassa page; card details are entered and processed there under YooKassa's rules. Auto-renewal can be turned off in the app settings at any time.</p>
+
+<h2>5. Storage and retention</h2>
+<p>Server data is hosted by Supabase, Inc. eu-west-1. Daily counters are kept up to 90 days, the question log (times only) up to 30 days, subscription data while the account is active and 3 years after the last payment (accounting). To have your data deleted, email ggghel43@gmail.com with your app version and the approximate purchase time.</p>
+
+<h2>6. Your rights</h2>
+<p>You can ask what data we process about you, correct or delete it, or withdraw consent (this turns off the subscription and AI features). Requests: ggghel43@gmail.com; we reply within 10 business days.</p>
+
+<h2>7. App permissions</h2>
+<ul>
+<li><b>Internet</b> — downloading and AI features.</li>
+<li><b>Notifications</b> — download progress, the media player and new picks.</li>
+<li><b>Background work</b> — so downloads and music keep going when the app is minimized.</li>
+</ul>
+<p>Kadr does not request contacts, location, camera or microphone access and shows no ads.</p>
+
+<h2>8. Content</h2>
+<p>Kadr is a tool for saving videos and music for personal viewing. Users are responsible for respecting authors' rights and the rules of the sites they save from.</p>
+
+<h2>9. Changes</h2>
+<p>We will announce changes to this policy in the app. The current version is always at this address.</p>
+</main></body></html>
