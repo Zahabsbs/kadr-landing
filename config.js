@@ -1,6 +1,6 @@
 /* Настройки лендинга Kadr — меняются здесь, код трогать не нужно. */
 window.KADR = {
-  version: "1.1.1",
+  version: "1.1.2",
   apkUrl: "https://github.com/Zahabsbs/kadr-landing/releases/latest/download/Kadr.apk",  // ссылка на последний релиз — не меняется с версиями
   apkSize: "71 МБ",
   minAndroid: "Android 10+",
@@ -11,8 +11,8 @@ window.KADR = {
 
   // Проверка APK на VirusTotal (обновляй с каждой версией)
   virustotal: {
-    version: "1.1.1",
-    sha256: "3d33131f88684458524074bebf6d283706ed799886f46a63429ea43f911373d5",
+    version: "1.1.2",
+    sha256: "5ff44a9045ed07811c0fa3e7c7d81d13260147a81bb619759edb767d6dfe5bc4",
   },                  // почта поддержки (покажется в подвале)
 
   // Отзывы: Supabase REST. anon-ключ публичный (Project Settings → API → anon public).
