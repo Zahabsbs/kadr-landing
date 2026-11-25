@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://zahabsbs.github.io/kadr-landing/sitemap.xml
+# retrigger pages build 25.11.2026 — re-run stuck in queue
