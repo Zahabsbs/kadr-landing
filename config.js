@@ -1,7 +1,7 @@
 /* Настройки лендинга Kadr — меняются здесь, код трогать не нужно. */
 window.KADR = {
   version: "1.1.1",
-  apkUrl: "Kadr-1.1.1.apk",          // файл APK рядом с index.html или полная ссылка
+  apkUrl: "https://github.com/Zahabsbs/kadr-landing/releases/latest/download/Kadr.apk",  // ссылка на последний релиз — не меняется с версиями
   apkSize: "71 МБ",
   minAndroid: "Android 10+",
   rustoreUrl: "",                    // когда модерация пройдёт — вставь ссылку, кнопка оживёт сама
